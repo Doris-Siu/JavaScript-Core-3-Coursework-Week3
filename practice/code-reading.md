@@ -14,7 +14,9 @@ Take a look at the following code:
 7    console.log(x);
 ```
 
-Explain why line 4 and line 6 output different numbers.
+Explain why line 4 and line 6 output different numbers
+
+Because the x in the 1st console.log is in the function, so it will refer to the function-scoped variable which is 2; while the 2nd console. log lies outside the function so it will refer to the global-scoped variable x which is 1.
 
 ## Question 2
 
@@ -34,6 +36,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+`10 undefined`
+Because x is defined globally so it can be also referenced in the function, but y is declared within the function so the outer console.log cannot access the variable.
 
 ## Question 3
 
@@ -62,3 +66,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+`9 { x: 10 }`
+Because f1 did not update the global variable x, so it's still 9.
+But, f2 has updated the value of the object y by 1 so the variable y is changed after the function call.
